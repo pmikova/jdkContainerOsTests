@@ -1,0 +1,14 @@
+<!--
+  Settings file using Google Maven Central mirror to avoid "too many requests" errors from maven.
+-->
+
+<settings>
+  <mirrors>
+    <mirror>
+      <id>google-maven-central</id>
+      <name>Google Maven Central mirror</name>
+      <url>https://maven-central.storage-download.googleapis.com/maven2</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+</settings>

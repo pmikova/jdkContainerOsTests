@@ -31,6 +31,12 @@
     </profiles>
     <mirrors>
       <mirror>
+        <id>google-maven-central</id>
+        <name>Google Maven Central mirror</name>
+        <url>https://maven-central.storage-download.googleapis.com/maven2</url>
+        <mirrorOf>central</mirrorOf>
+      </mirror>
+      <mirror>
         <id>repo.jenkins-ci.org</id>
         <url>https://repo.jenkins-ci.org/public/</url>
         <mirrorOf>m.g.o-public</mirrorOf>

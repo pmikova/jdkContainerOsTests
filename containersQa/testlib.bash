@@ -646,7 +646,9 @@ function s2iLocal() {
         $s2iBin build -e "$MAIN" -e "$ARGS" -e "$SETTING_ARGS" "$REPO" "$HASH" "$NAME" --assemble-user $USERNAME --as-dockerfile $DF.orig
         cp $LIBCQA_SCRIPT_DIR/jenkins_settings.xml  upload/src
     else
-        $s2iBin build -e "$MAIN" -e "$ARGS" "$REPO" "$HASH" "$NAME" --assemble-user $USERNAME --as-dockerfile $DF.orig
+        # copy the maven mirror settings file to the local tmp directory
+        $s2iBin build -e "$MAIN" -e "$ARGS" -e "MAVEN_SETTINGS_XML=/tmp/src/maven_mirror.xml" "$REPO" "$HASH" "$NAME" --assemble-user $USERNAME --as-dockerfile $DF.orig
+        cp $LIBCQA_SCRIPT_DIR/maven_mirror.xml  upload/src
     fi
     if [ "x$OVERWRITE_USER" == x ] && [ "0$OTOOL_BUILD_OS_VERSION" -le "9" ] ; then
       #update the container file for proper functionality
