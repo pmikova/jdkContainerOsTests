@@ -912,7 +912,7 @@ function checkHardcodedJdks() {
   JRE_11_VERSION='11.0.33+10-LTS'
   JRE_17_VERSION='17.0.21.1+2-LTS'
   JRE_21_VERSION='21.0.13.1+2-LTS'
-  JRE_25_VERSION='25.0.5.1+2+8'
+  JRE_25_VERSION='25.0.5.1+2'
   if [ "$OTOOL_jresdk" == "jre"  ] ; then
     echo "otool jresdk settings is: $OTOOL_jresdk"
     echo "Check version based off java -version call."
