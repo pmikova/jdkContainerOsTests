@@ -909,7 +909,7 @@ function checkHardcodedMaven() {
 
 function checkHardcodedJdks() {
   JRE_8_VERSION='1.8.0_514-b01'
-  JRE_11_VERSION='11.0.33+10-LTS'
+  JRE_11_VERSION='11.0.33.1+1-LTS'
   JRE_17_VERSION='17.0.21.1+2-LTS'
   JRE_21_VERSION='21.0.13.1+2-LTS'
   JRE_25_VERSION='25.0.5.1+2'
